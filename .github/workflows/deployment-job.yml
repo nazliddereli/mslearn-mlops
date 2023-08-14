@@ -18,6 +18,6 @@ jobs:
       with:
         creds: ${{secrets.AZURE_CREDENTIALS}}
     - name: Create endpoint
-      run: az ml online-endpoint create --name diabetes-prod-model-deployment
+      run: az ml online-endpoint create --name diabetes-prod-model-deployment --workspace-name mlwork --resource-group mlops
     - name: Deploy model
-      run: az ml online-deployment create -f src/job-deploy.yml --all-traffic
+      run: az ml online-deployment create -f src/job-deploy.yml --all-traffic --workspace-name mlwork --resource-group mlops
