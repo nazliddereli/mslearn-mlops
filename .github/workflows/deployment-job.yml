@@ -20,4 +20,4 @@ jobs:
     # - name: Create endpoint
     #   run: az ml online-endpoint create --name diabetes-prod-model-deployment --workspace-name mlwork --resource-group mlops
     - name: Deploy model
-      run: az ml online-deployment create -f src/job-deploy.yml --all-traffic --workspace-name mlwork --resource-group mlops
+      run: az ml online-deployment create -f src/job-deploy.yml --workspace-name mlwork --resource-group mlops
