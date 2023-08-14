@@ -1,0 +1,5 @@
+$schema: https://azuremlschemas.azureedge.net/latest/asset.schema.json
+name: diabetes-prod
+version: 1
+path: ../production/data/
+description: Dataset pointing to diabetes-prod CSV on local computer. Data will be uploaded to default datastore.

@@ -6,9 +6,9 @@ command: >-
 inputs:
   training_data: 
     type: uri_folder
-    path: azureml:diabetes-dev:1
+    path: azureml:diabetes-prod:1
   reg_rate: 0.01
 environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
 compute: azureml:forgithubactions
-experiment_name: diabetes-experiment
-description: job to train the diabetes model
+experiment_name: diabetes-prod
+description: production job to train the diabetes model
