@@ -2,5 +2,5 @@ $schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.sch
 name: deploy-to-production
 endpoint_name: diabetes-prod-model-deployment
 model: azureml:diabetes-prod-model:1
-instance_type: STANDARD_D2A_V4
+instance_type: STANDARD_E4AS_V4
 instance_count: 1
