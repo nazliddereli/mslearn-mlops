@@ -1,11 +1,27 @@
-name: Placeholder
+name: All code checks
 
 on: [pull_request]
 
 jobs:
-  echo:
+  job1:
+    name: linting & unit tests
     runs-on: ubuntu-latest
     steps:
-      - name: Placeholder echo
-        run: |
-          echo "Will add code checks here in next challenge"
+    - name: Check out repo
+      uses: actions/checkout@main
+    - name: Use Python version 3.8
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.8'
+    - name: Install Flake8
+      run: |
+        python -m pip install flake8
+    - name: Run linting tests
+      run: | 
+        flake8 src/model/
+    - name: Install Pytest
+      run: |
+        python -m pip install pytest
+    - name: Run unit tests
+      run: |
+        pytest tests/
